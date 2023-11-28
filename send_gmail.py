@@ -24,6 +24,8 @@ def send_gmail():
             email_server.login(gmail,password)
             email_server.sendmail(gmail,client,message)
 
+            messagebox.showinfo("Info","Email sent successfully.")
+
         except ValueError:
             messagebox.showwarning("Warning","Oops!  That was no valid number.  Try again...")
 
@@ -56,7 +58,6 @@ password_label.place(x=50,y=102)
 password_entry = Entry(from_frame,width=30,bd=5)
 password_entry.place(x=150,y=100)
 
-
 to_label = Label(to_frame,text="TO",width=60,height=2,bg="Yellow",font="Times 20 italic")
 to_label.place(x=-120)
 
@@ -65,8 +66,6 @@ client_label.place(x=50,y=72)
 
 client_entry = Entry(to_frame,width=30,bd=5)
 client_entry.place(x=150,y=70)
-
-
 
 to_label = Label(info_frame,text="INFO",width=60,height=2,bg="Brown",font="Times 20 italic")
 to_label.place(x=-120,y=80)
@@ -91,52 +90,5 @@ host_entry.place(x=150,y=220)
 
 send_button = Button(info_frame,text="Send",command=send_gmail,font="Helvetica 10 bold",bg="Gray")
 send_button.place(x=225,y=260)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 mainloop()
