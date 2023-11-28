@@ -13,7 +13,7 @@ def send_gmail():
             password = password_entry.get()
 
             client = client_entry.get()
-            # title
+            
             message = message_entry.get()
 
             context = ssl.create_default_context()
